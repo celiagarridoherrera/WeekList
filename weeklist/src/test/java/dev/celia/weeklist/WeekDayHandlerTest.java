@@ -32,5 +32,15 @@ public class WeekDayHandlerTest {
         handler.createList();
         assertEquals(7, handler.getSizeList());
     }
+
+    @Test
+    void testDeleteDay() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        handler.deleteDay("Monday");
+        assertFalse(handler.getDays().contains("Monday"));
+        
+    }
+    
     
 }
