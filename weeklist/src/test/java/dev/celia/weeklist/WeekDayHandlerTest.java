@@ -79,7 +79,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void testeEmptyList() {
+    void testEmptyList() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         handler.createList();

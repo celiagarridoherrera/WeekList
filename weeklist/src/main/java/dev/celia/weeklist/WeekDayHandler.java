@@ -46,7 +46,9 @@ public class WeekDayHandler {
         days.sort(String::compareTo);
     }
 
-    
+    public void emptyList() {
+        days.clear();
+    }
 
 
 }
