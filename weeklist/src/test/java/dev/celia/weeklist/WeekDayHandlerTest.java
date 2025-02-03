@@ -60,5 +60,18 @@ public class WeekDayHandlerTest {
         assertThrows(IndexOutOfBoundsException.class, () -> handler.getSpecificDayByIndex(7));
     }
 
+    @Test
+    void dayExists() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        assertTrue(handler.getDays().contains("Monday"));
+        assertTrue(handler.getDays().contains("Sunday"));
+        assertFalse(handler.getDays().contains("Caturday"));
+    }
+    
+
+        
+    }
+
     
 }
