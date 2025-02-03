@@ -27,7 +27,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    public void tesGetSizeList() {
+    public void testGetSizeList() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         assertEquals(7, handler.getSizeList());
@@ -61,7 +61,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    public void testdayExists() {
+    public void testDayExists() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         assertTrue(handler.dayExists("Monday"));
@@ -69,7 +69,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    public void testsortAlphabetically() {
+    public void testSortAlphabetically() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         handler.sortAlphabetically();
@@ -78,8 +78,13 @@ public class WeekDayHandlerTest {
         
     }
 
-    
-    
-
+    @Test
+    void testeEmptyList() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        handler.createList();
+        handler.emptyList();
+        assertTrue(handler.getDays().isEmpty());
         
-    }
+    }    
+}
