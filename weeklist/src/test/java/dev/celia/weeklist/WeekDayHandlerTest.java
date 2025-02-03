@@ -34,7 +34,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void testDeleteDay() {
+    public void testDeleteDay() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         handler.deleteDay("Monday");
@@ -43,7 +43,7 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void testSpecificDayByName() {
+    public void testSpecificDayByName() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         assertEquals("Monday", handler.getSpecificDayByName("Monday"));
@@ -51,7 +51,14 @@ public class WeekDayHandlerTest {
         assertNull(handler.getSpecificDayByName("Caturday"));
     }
 
-    
-    
+    @Test
+    public void testSpecificDayByIndex() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        assertEquals("Monday", handler.getSpecificDayByIndex(0));
+        assertEquals("Sunday", handler.getSpecificDayByIndex(6));
+        assertThrows(IndexOutOfBoundsException.class, () -> handler.getSpecificDayByIndex(7));
+    }
+
     
 }

@@ -34,4 +34,8 @@ public class WeekDayHandler {
         return null;
     }
 
+    public String getSpecificDayByIndex(int index) {
+        return days.get(index);
+    }
+
 }
