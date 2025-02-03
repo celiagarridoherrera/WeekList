@@ -61,12 +61,24 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void testdayExists() {
+    public void testdayExists() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
         assertTrue(handler.dayExists("Monday"));
         assertFalse(handler.dayExists("Caturday"));
     }
+
+    @Test
+    public void testsortAlphabetically() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        handler.sortAlphabetically();
+        List<String> expected = List.of("Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday");
+        assertEquals(expected, handler.getDays());
+        
+    }
+
+    
     
 
         
