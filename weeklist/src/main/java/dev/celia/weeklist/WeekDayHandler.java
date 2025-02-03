@@ -27,5 +27,11 @@ public class WeekDayHandler {
         days.remove(day);
     }
     
+    public String getSpecificDayByName(String day) {
+        if (days.contains(day)) {
+            return day;
+        }
+        return null;
+    }
 
 }
