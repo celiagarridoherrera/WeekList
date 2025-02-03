@@ -41,6 +41,17 @@ public class WeekDayHandlerTest {
         assertFalse(handler.getDays().contains("Monday"));
         
     }
+
+    @Test
+    void testSpecificDayByName() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        assertEquals("Monday", handler.getSpecificDayByName("Monday"));
+        assertEquals("Friday", handler.getSpecificDayByName("Friday"));
+        assertNull(handler.getSpecificDayByName("Caturday"));
+    }
+
+    
     
     
 }
