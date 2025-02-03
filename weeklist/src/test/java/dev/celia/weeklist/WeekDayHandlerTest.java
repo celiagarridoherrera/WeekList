@@ -26,5 +26,11 @@ public class WeekDayHandlerTest {
         
     }
 
+    @Test
+    public void tesGetSizeList() {
+        WeekDayHandler handler = new WeekDayHandler();
+        handler.createList();
+        assertEquals(7, handler.getSizeList());
+    }
     
 }
