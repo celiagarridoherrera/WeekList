@@ -38,4 +38,8 @@ public class WeekDayHandler {
         return days.get(index);
     }
 
+    public boolean dayExists (String day) {
+        return days.contains(day);
+    }
+
 }

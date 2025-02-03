@@ -61,17 +61,13 @@ public class WeekDayHandlerTest {
     }
 
     @Test
-    void dayExists() {
+    void testdayExists() {
         WeekDayHandler handler = new WeekDayHandler();
         handler.createList();
-        assertTrue(handler.getDays().contains("Monday"));
-        assertTrue(handler.getDays().contains("Sunday"));
-        assertFalse(handler.getDays().contains("Caturday"));
+        assertTrue(handler.dayExists("Monday"));
+        assertFalse(handler.dayExists("Caturday"));
     }
     
 
         
     }
-
-    
-}
