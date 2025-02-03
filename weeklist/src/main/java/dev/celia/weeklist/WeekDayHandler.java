@@ -22,6 +22,10 @@ public class WeekDayHandler {
     public int getSizeList() {
         return days.size();
     }
+
+    public void deleteDay(String day) {
+        days.remove(day);
+    }
     
 
 }
