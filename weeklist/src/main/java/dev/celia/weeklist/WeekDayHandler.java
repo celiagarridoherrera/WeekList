@@ -42,4 +42,9 @@ public class WeekDayHandler {
         return days.contains(day);
     }
 
+    public void sortAlphabetically() {
+        days.sort(String::compareTo);
+    }
+
+
 }
